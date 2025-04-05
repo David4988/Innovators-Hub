@@ -10,8 +10,6 @@ import Spinner from "../helpers/Spinner"
 const Menu = () => {
   let {authUser} = useContext(AuthContextAPI)
   let {userProfile, isLoading} = useContext(UserContextAPI)
-
-  console.log(userProfile?.role)
   
   return (
     <aside>
