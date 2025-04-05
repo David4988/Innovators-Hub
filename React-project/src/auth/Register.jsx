@@ -7,7 +7,7 @@ import { NavLink, useNavigate} from "react-router-dom";
 import { __AUTH } from "../backend/firebaseConfig";
 import Spinner from "../helpers/Spinner";
 import sideImg from "../assets/side-img.svg"
-
+import Logo from "../assets/logo.png"
 
 
 const Register = () => {
