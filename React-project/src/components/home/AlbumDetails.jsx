@@ -5,7 +5,6 @@ import { AlbumContextAPI } from '../../context/AlbumContext'
 const AlbumDetails = () => {
     let data = useLocation() //! getting the location object which has -> pathName, search, hash and state
     let {state:{album}} = data //! from the state, we are performing nested destructuring and extracting the album object
-    console.log(album)
 
     const {
         songs,
@@ -105,6 +104,7 @@ const AlbumDetails = () => {
                         <td className='text-center text-sm font-semibold'>{index+1}</td>
                         <td className='flex justify-center pl-10 py-4'><img src={song.songThumbnail} className='w-20 rounded' alt="" /></td>
                         <td className={`text-center text-sm font-semibold ${(currentSongIndex === index && isPlaying) ? `text-green-500` : ``}`}>{song.songName}</td>
+                        <td className='text-center text-sm font-semibold '>{song.songSingers}</td>
                         <td className='text-center text-sm font-semibold '>{song.songDirector}</td>
                         <td className='text-center text-sm font-semibold'>{`${songM}:${songS.toString().padStart(2,'0')}`}</td>
                     </tr>
