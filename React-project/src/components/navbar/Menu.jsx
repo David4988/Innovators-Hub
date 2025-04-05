@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { AuthContextAPI } from "../context/AuthContext";
-import LoginRegister from "../components/navbar/LoginRegister";
-import Logout from "../components/navbar/Logout";
-import ProfilePic from "../components/profilePic";
-import { UserContextAPI } from "../context/UserContext";
-import Spinner from "../helpers/Spinner"
+import { AuthContextAPI } from "../../context/AuthContext";
+import LoginRegister from "./LoginRegister";
+import Logout from "./Logout";
+import ProfilePic from "../profilePic";
+import { UserContextAPI } from "../../context/UserContext";
+import Spinner from "../../helpers/Spinner"
 
 const Menu = () => {
   let {authUser} = useContext(AuthContextAPI)
