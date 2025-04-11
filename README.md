@@ -105,4 +105,5 @@ npm run dev
 
 **Developed by [Jason David](https://github.com/David4988)**  
 📧 Email: davidson4988@gmail.com
-🔗 LinkedIn: [Jason David](https://www.linkedin.com/in/david4988/)
+<br/>
+🔗 LinkedIn: **[Jason David](https://www.linkedin.com/in/david4988/)**
