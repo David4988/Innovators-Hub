@@ -61,7 +61,7 @@ src/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/David4988/innovators-hub-music.git
+[git clone https://github.com/David4988/Innovators-Hub.git)](https://github.com/David4988/Innovators-Hub.git)
 cd innovators-hub-music
 ```
 
