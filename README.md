@@ -103,5 +103,5 @@ npm run dev
 
 ## 📬 Contact
 
-**Developed by [Jason](https://github.com/your-username)**  
-📧 Email: your.email@example.com
+**Developed by [Jason](https://github.com/David4988)**  
+📧 Email: davidson4988@gmail.com
