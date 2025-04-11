@@ -13,6 +13,9 @@ const AddAlbum = () => {
     albumDescription: "",
   });
 
+  const cloudinaryKey = import.meta.env.VITE_CLOUDINARY_KEY;
+  const cloudinarySongKey = import.meta.env.VITE_CLOUDINARY_KEY_SONG
+
   const [isLoading, setIsLoading] = useState(false)
 
   const {albumTitle, albumPoster, albumReleaseDate,albumLanguages,albumDescription} = album;
@@ -79,7 +82,7 @@ const AddAlbum = () => {
       albumPosterData.append("upload_preset", "Innovators hub music")
 
       let response =await fetch(
-        `https://api.cloudinary.com/v1_1/djv7apqom/image/upload`,
+        cloudinaryKey,
         {
           method: "POST",
           body:albumPosterData
@@ -111,7 +114,7 @@ const AddAlbum = () => {
         songThumbnailData.append("upload_preset", "Innovators hub music")
 
         const songThumbnailResponse = await fetch(
-            `https://api.cloudinary.com/v1_1/djv7apqom/image/upload`,
+            cloudinaryKey,
             {
               method: "POST",
               body:songThumbnailData
@@ -126,7 +129,7 @@ const AddAlbum = () => {
         songFileData.append("file", value.songFile)
         songFileData.append("upload_preset", "Innovators hub music")
         
-        const songFileResponse = await fetch(`https://api.cloudinary.com/v1_1/djv7apqom/upload`,
+        const songFileResponse = await fetch(cloudinarySongKey,
           {
             method: "POST",
             body:songFileData

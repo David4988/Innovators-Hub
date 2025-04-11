@@ -13,7 +13,7 @@ const UpdatePicture = () => {
   const [picture, setPicture] = useState(null)
   const [preview, setPreview] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
-
+  const cloudinaryKey = import.meta.env.VITE_CLOUDINARY_KEY;
   const handleChange = (e) =>{
     // console.dir(e.target.files[0])
     let file = e.target.files[0]
@@ -23,8 +23,6 @@ const UpdatePicture = () => {
     if(file){
 
       let url =URL.createObjectURL(file)
-
-      console.log(url)
 
       setPreview(url)
     }
@@ -45,14 +43,13 @@ const UpdatePicture = () => {
       data.append("file",picture)
       data.append("upload_preset", "Innovators hub music")
       let response =await fetch(
-        `https://api.cloudinary.com/v1_1/djv7apqom/image/upload`,
+        cloudinaryKey,
         {
           method: "POST",
           body:data
         }
       )
       let result= await response.json()
-      console.log(result)
       updateProfile(authUser,{photoURL:result.url})
       toast.success("Photo updated")
 

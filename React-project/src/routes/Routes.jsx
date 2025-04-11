@@ -64,7 +64,7 @@ const routes=createBrowserRouter([
                 children:[
                     {
                         index:true,
-                        element: <AdminDashboard />
+                        element: <AddAlbum />
                     },
                     {
                         path: "add-album",

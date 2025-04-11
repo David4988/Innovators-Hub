@@ -33,7 +33,6 @@ const Login = () => {
       let obj = await signInWithEmailAndPassword(__AUTH, email, passwd)
 
       let {user} = obj
-      console.log(user)
 
       if(user.emailVerified == true){
         toast.success("Login successful")

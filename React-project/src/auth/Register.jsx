@@ -40,7 +40,6 @@ let [data, setData] = useState({
         let obj = await createUserWithEmailAndPassword(
           __AUTH, email, passwd
         ) //? If successful, creating an account and storing it as an object
-        console.log(obj)
         let {user} = obj
       
       await updateProfile(user, {
