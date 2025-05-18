@@ -45,7 +45,6 @@ const UpdateProfile = () => {
       address:addr,
       role:"user"
     }
-    console.log(payload)
     try{
       let user_collection = doc(__DB, "user_profile", uid)
 
